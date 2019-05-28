@@ -17,3 +17,5 @@ phases:
   post_build:
     commands:
       - mix test
+      - zip -r upload.zip ./*
+      - aws s3 cp upload.zip  s3://elixir-backend-kargo-devops-candidates
