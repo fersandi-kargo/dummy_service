@@ -11,6 +11,8 @@ phases:
   build:
     commands:
       - echo Entered the build phase...
+      - mix local.hex --force
+      - mix local.rebar --force
       - mix deps.get
   post_build:
     commands:
