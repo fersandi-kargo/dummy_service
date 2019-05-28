@@ -12,6 +12,6 @@ phases:
     commands:
       - echo Entered the build phase...
       - mix deps.get
-  test:
+  post_build:
     commands:
       - mix test
